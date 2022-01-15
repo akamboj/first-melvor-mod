@@ -1,0 +1,18 @@
+{
+    "manifest_version": 2,
+    "name": "First Melvor Mod",
+    "version": "0.1",
+    "description": "Desc",
+    "icons": {
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://melvoridle.com/*", "*://www.melvoridle.com/*", "*://test.melvoridle.com/*"],
+        "js": ["first_mod_main.js"]
+      }
+    ],
+    "web_accessible_resources": [
+      "inject-mice.js"
+    ]
+  }
+  
