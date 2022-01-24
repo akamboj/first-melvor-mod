@@ -8,8 +8,11 @@ updateAllPlayerModifiers();
 player.passives.set({ modifiers: { increasedMeleeAccuracyBonus: 1000 }}, { save: false, display: false });
 updateAllPlayerModifiers();
 
-increasedThievingStealth
 decreasedAttackInterval
+increasedGlobalAccuracy
+
+increasedThievingStealth
+increasedMiningNodeHP
 
 {
     "increasedGlobalAccuracy": 0,
