@@ -1,11 +1,16 @@
+SEMI error fix: https://discord.com/channels/625838709203271680/664637399028072470/937727045864136776
+
+
 decreasedSkillInterval
 
 // Param is miliseconds?
 // decreasedSkillIntervalPercent - also exists
-player.passives.set({ modifiers: { decreasedSkillInterval: [[CONSTANTS.skill.Mining, 1200]] }}, { save: false, display: false });
+player.passives.set({ modifiers: { decreasedSkillInterval: [[CONSTANTS.skill.Mining, 3200]] }}, { save: false, display: false });
 updateAllPlayerModifiers();
 
 player.passives.set({ modifiers: { increasedMeleeAccuracyBonus: 1000 }}, { save: false, display: false });
+updateAllPlayerModifiers();
+player.passives.set({ modifiers: { increasedThievingStealth: 1000 }}, { save: false, display: false });
 updateAllPlayerModifiers();
 
 decreasedAttackInterval
