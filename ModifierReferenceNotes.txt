@@ -5,12 +5,12 @@ decreasedSkillInterval
 
 // Param is miliseconds?
 // decreasedSkillIntervalPercent - also exists
-player.passives.set({ modifiers: { decreasedSkillInterval: [[CONSTANTS.skill.Mining, 3200]] }}, { save: false, display: false });
+player.passives.set({ modifiers: { decreasedSkillInterval: [[CONSTANTS.skill.Mining, 32000]] }}, { save: false, display: false });
 updateAllPlayerModifiers();
 player.passives.set({ modifiers: { increasedMiningNodeHP: 1000 }}, { save: false, display: false });
 updateAllPlayerModifiers();
 
-player.passives.set({ modifiers: { increasedMeleeAccuracyBonus: 1000 }}, { save: false, display: false });
+player.passives.set({ modifiers: { increasedGlobalAccuracy: 1000 }}, { save: false, display: false });
 updateAllPlayerModifiers();
 player.passives.set({ modifiers: { increasedThievingStealth: 1000 }}, { save: false, display: false });
 updateAllPlayerModifiers();
