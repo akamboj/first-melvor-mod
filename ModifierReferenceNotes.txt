@@ -10,7 +10,7 @@ updateAllPlayerModifiers();
 player.passives.set({ modifiers: { increasedMiningNodeHP: 1000 }}, { save: false, display: false });
 updateAllPlayerModifiers();
 
-player.passives.set({ modifiers: { increasedGlobalAccuracy: 1000 }}, { save: false, display: false });
+player.passives.set({ modifiers: { increasedGlobalAccuracy: 5000 }}, { save: false, display: false });
 updateAllPlayerModifiers();
 player.passives.set({ modifiers: { increasedThievingStealth: 1000 }}, { save: false, display: false });
 updateAllPlayerModifiers();
@@ -20,6 +20,25 @@ increasedGlobalAccuracy
 
 increasedThievingStealth
 increasedMiningNodeHP
+
+game.mining.respawnRock(game.mining.actions.getObjectByID('melvorTotH:Corundumite_Ore'))
+
+game.bank.addItemByID("itemID", 1, false, true);
+https://pastebin.com/JK08WQQk
+
+
+mod.getDevContext().patch(Player, 'computeModifiers').after(() => {
+  game.combat.player.modifiers.addModifiers({ increasedDamageReduction: 100, decreasedAttackIntervalPercent: 100, increasedThievingStealth : 2500 });
+});
+game.combat.player.computeAllStats();
+
+game.mining.actions.forEach(e => game.mining.respawnRock(e))
+
+game.combat.player.modifyAttackInterval = () => ctx.settings.section('interval').get('intervalModifier');
+
+https://mod.io/g/melvoridle/m/player-and-enemy-modifiers
+
+
 
 {
     "increasedGlobalAccuracy": 0,
